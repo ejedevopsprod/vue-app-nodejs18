@@ -30,4 +30,4 @@ npm run build
 ```
 
 
-### simooon! x25
+### simooon! x26
