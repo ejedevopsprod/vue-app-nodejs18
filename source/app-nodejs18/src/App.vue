@@ -4,18 +4,25 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <h1>{{ title }}</h1>
+    <p>La API está en: {{ apiUrl }}</p>
+    <p v-if="featureFlag">¡La funcionalidad está activada!</p>
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: process.env.VUE_APP_TITLE,
+      apiUrl: process.env.VUE_APP_API_URL,
+      featureFlag: process.env.VUE_APP_FEATURE_FLAG === 'true',
+    };
+  },
+};
+</script>
+
 
 <style scoped>
 header {
