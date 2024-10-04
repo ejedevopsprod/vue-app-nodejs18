@@ -7,7 +7,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <div>
     <h1>{{ title }}</h1>
     <p>La API está en: {{ apiUrl }}</p>
-    <p v-if="featureFlag">¡La funcionalidad está activada!</p>
+    <p v-if="featureFlag">¡La funcionalidad está activada!!</p>
   </div>
 </template>
 
